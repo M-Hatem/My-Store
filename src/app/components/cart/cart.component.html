@@ -23,7 +23,9 @@
                 id="amount"
                 value="{{ product.quantity }}"
                 class="form-control"
-                (change)="changeAmount(product, $event)"
+                [(ngModel)]="product.quantity"
+                name="qunatity"
+                (ngModelChange)="changeAmount(product, product.quantity)"
               />
             </form>
             <button
@@ -53,7 +55,12 @@
               minlength="3"
               name="name"
               ngModel
+              #name="ngModel"
+              [(ngModel)]="fullName"
             />
+            <div class="text-danger" *ngIf="name.invalid && name.touched">
+              Please type a valid name.
+            </div>
           </div>
           <div class="my-4">
             <label for="address">Address</label>
@@ -65,21 +72,29 @@
               required
               minlength="6"
               ngModel
+              #address="ngModel"
               name="address"
             />
+            <div class="text-danger" *ngIf="address.invalid && address.touched">
+              Please type a valid address.
+            </div>
           </div>
           <div class="my-4">
             <label for="credit">Credit card number</label>
             <input
-              type="text"
+              type="number"
               id="credit"
               placeholder="(16-digit number)"
               class="form-control"
               required
-              minlength="16"
+              pattern=".{16,16}"
               ngModel
+              #credit="ngModel"
               name="credit"
             />
+            <div class="text-danger" *ngIf="credit.invalid && credit.touched">
+              Please type a valid credit number.
+            </div>
           </div>
           <p class="text-muted">
             we'll never share your payment details with anyone else.

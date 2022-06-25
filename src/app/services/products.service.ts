@@ -8,6 +8,7 @@ import { Product } from '../models/product.model';
 export class ProductsService {
   cartedProducts: Product[] = [];
   totalPrice: number = 0;
+  fullName: string = '';
   constructor(private http: HttpClient) {}
 
   getProducts() {

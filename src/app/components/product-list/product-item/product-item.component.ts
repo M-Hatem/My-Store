@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Product } from 'src/app/models/product.model';
 import { ProductsService } from 'src/app/services/products.service';
@@ -10,12 +10,15 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class ProductItemComponent implements OnInit {
   @Input() product!: Product;
+  @Output() errorMsg: EventEmitter<string> = new EventEmitter();
+  errorMessage: string = 'A product has been added to the cart';
+
   constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {}
 
   alert() {
-    alert('A product has been added to the cart');
+    this.errorMsg.emit(this.errorMessage);
   }
 
   onSubmit(formData: NgForm) {

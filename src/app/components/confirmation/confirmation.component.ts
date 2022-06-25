@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductsService } from '../services/products.service';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-confirmation',
@@ -9,6 +9,7 @@ import { ProductsService } from '../services/products.service';
 })
 export class ConfirmationComponent implements OnInit {
   totalPrice: number = 0;
+  fullName: string = '';
   constructor(
     private productsService: ProductsService,
     private router: Router
@@ -16,11 +17,13 @@ export class ConfirmationComponent implements OnInit {
 
   ngOnInit(): void {
     this.totalPrice = this.productsService.totalPrice;
+    this.fullName = this.productsService.fullName;
   }
 
   resetProducts() {
     this.productsService.resetProducts();
     this.router.navigate(['/product-list']);
     this.productsService.totalPrice = 0;
+    this.productsService.fullName = '';
   }
 }

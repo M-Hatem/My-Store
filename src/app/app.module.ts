@@ -4,13 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CartComponent } from './cart/cart.component';
-import { ConfirmationComponent } from './confirmation/confirmation.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductItemComponent } from './product-list/product-item/product-item.component';
-import { ProductItemDetailComponent } from './product-list/product-item/product-item-detail/product-item-detail.component';
-import { HeaderComponent } from './header/header.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CartComponent } from './components/cart/cart.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductItemComponent } from './components/product-list/product-item/product-item.component';
+import { ProductItemDetailComponent } from './components/product-list/product-item/product-item-detail/product-item-detail.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

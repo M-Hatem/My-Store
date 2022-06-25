@@ -43,3 +43,7 @@ img {
   justify-content: center;
   margin-top: 64px;
 }
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
