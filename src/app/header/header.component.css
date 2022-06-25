@@ -1,0 +1,22 @@
+nav {
+  /* height: 70px; */
+  background-color: #3baedd;
+  width: 100vw;
+}
+
+nav .title {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+nav a,
+nav span {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav .selected {
+  color: #000;
+  border-bottom: #fff;
+}

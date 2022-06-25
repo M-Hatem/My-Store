@@ -1,0 +1,11 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <app-product-item
+        class="col-4 my-4 text-center"
+        *ngFor="let product of productsList; let i = index"
+        [product]="product"
+      ></app-product-item>
+    </div>
+  </div>
+</section>

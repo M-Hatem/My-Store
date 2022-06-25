@@ -1,27 +1,34 @@
-# MyStore
+# Project Title
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+My Store
 
-## Development server
+# Table of content
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Description](#project-description)
+- [Technologies](#technologies-i-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Notes](#notes)
 
-## Code scaffolding
+# Project Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This is a CRUD system for adding, modifying and removing items from or to a cart with a validation system for making all things right.
 
-## Build
+# Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The home page is the products-list that show all the available products that anyone can buy, after choosing the product you want by entering the product page and read all the details of the product, you simply add it to the cart and an alert will be shown to confirm that action, when you enter your cart, you will be able to modify the amount of the items you want and the price will be update automatically, you will be able to remove any product from the cart by pressing remove from cart button or by reducing the number of amount to zero, a new alert will be shown to confirm your action. after deciding what you want to buy, you will simply fill the form with the required data, and submit button won't be available to be clicked unless you entered the correct data. after purchasing the products you want, you will be directed to a confirmation page to show you the total price of the products and the duration of shipping.
 
-## Running unit tests
+# Notes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- The store is designed only for web version, there's no responsive design.
+- ngModel is used in the template drived form but not for two way data-binding.
+- Input decorator is used to pass a property from product-list component to product-item component by using the ngFor structural-directive but there were no need to use output decorator.
 
-## Running end-to-end tests
+# Technologies i used
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Angular CLI for generating components and service.
+- Bootstrap V5 for styling.
 
-## Further help
+# Installation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Simply type in Terminal **_npm install_** and then **_ng serve_** or **_ng s_** for serving and starting the project on a web page with port 4200.
